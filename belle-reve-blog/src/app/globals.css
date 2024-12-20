@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-bar{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  flex: 1;
+}
