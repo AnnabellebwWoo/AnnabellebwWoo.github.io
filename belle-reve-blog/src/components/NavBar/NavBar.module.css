@@ -1,0 +1,18 @@
+.menuBar {
+    display: flex;
+    width: 80%;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.menuBar ul {
+    display: flex;  
+    width: 100%;  
+}
+
+.menuBar li {
+    flex: 1;
+    text-align: left;
+}

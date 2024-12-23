@@ -2,22 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu-bar{
-  display: flex;
-  flex-direction: column;
-  
+@font-face {
+  font-family: 'Antic Didone'; 
+  src: url('https://fonts.google.com/specimen/Antic+Didone'); /*URL to font*/
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 80%;
-  flex: 1;
+* {
+  font-family: 'Antic Didone', Georgia, 'Times New Roman', Times, serif;
 }
