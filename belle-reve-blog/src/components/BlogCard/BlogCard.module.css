@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    flex: 1;
+    padding: 0 1.5em 0;
+  }
