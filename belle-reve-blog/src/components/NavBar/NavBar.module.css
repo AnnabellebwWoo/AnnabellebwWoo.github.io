@@ -1,3 +1,16 @@
+.lineWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.Line {
+    width: 90%;
+    border: 0;
+    border-top: 1px solid #000; 
+    margin: 0.5em 0; 
+
+}
+
 .menuBar {
     display: flex;
     width: 80%;
