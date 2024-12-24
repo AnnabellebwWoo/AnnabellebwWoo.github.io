@@ -20,8 +20,8 @@ const Footer = () => {
             <li><h1>Social</h1>
                 <ul className={styles.subList}>
                     <li><a href="mailto:bellereveblog@gmail.com">Email</a></li>
-                    <li><a href="https://www.instagram.com/bellereveblog/">Instagram (@bellereveblog)</a></li>
-                    <li><a href="https://www.tiktok.com/@bellereveblog">TikTok (@bellereveblog)</a></li>
+                    <li><a href="https://www.instagram.com/bellereveblog/">Instagram</a> (@bellereveblog)</li>
+                    <li><a href="https://www.tiktok.com/@bellereveblog">TikTok</a> (@bellereveblog)</li>
                     <li><a href="https://open.spotify.com/user/annabellewoo911?si=5fbc0531a04d48cd">Spotify</a></li>
                 </ul>
             </li>

@@ -1,0 +1,11 @@
+.about {
+    display: flex;
+}
+
+.about Image {
+    margin: auto;
+} 
+
+.about p {
+    color: red;
+}
