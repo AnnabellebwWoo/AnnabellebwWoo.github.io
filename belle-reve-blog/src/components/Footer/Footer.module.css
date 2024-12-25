@@ -29,6 +29,5 @@
 .subList {
     display: flex;
     flex-direction: column;
-    padding-left: 0.5em;
     line-height: 2.5em;
 }
