@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Playfair Display'; 
-    src: url('https://fonts.google.com/specimen/Playfair+Display');
-  }
- 
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +18,7 @@
 .text {
     flex: 1;
     color: grey;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2em;
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './styles.module.css'
+import '../globals.css'
  
 const AboutPage = () => {
   return (
