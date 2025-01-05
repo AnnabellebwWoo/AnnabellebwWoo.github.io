@@ -1,14 +1,25 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   width: 80%;
   position: absolute;
-  transform: translate(0%, 170%);
+  transform: translate(-50%, 90%);
   background-color: white;
+  bottom: 0;
+  left: 50%;
 }
 
 .card Image {
   align-items: center;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
 }
 
 .card h1 {
@@ -32,6 +43,6 @@
 .moreInfo {
   display: flex;
   justify-content: space-between;
-  margin: 1em 0;
+  margin: 1em;
   color: #6f6f6f;
 }

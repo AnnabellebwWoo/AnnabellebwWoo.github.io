@@ -3,12 +3,11 @@ import styles from './BlogCard.module.css';
 import Link from "next/link";
 import Image from 'next/image'
 
-// import { BlogPostsProps } from "@/lib/types";
 
 const BlogCard= ( ) => {
     return(
-       <>
-       <Image src="/images/Beach.jpg" alt="beach" width={500} height={500}className={styles.image}></Image>
+       <div className={styles.container}>
+       <Link href="/blog-post"><Image src="/images/Beach.jpg" alt="beach" width={500} height={500}className={styles.image}></Image></Link>
                  <ul className={styles.card}>
                     <h1><Link href="/blog-post">Title</Link></h1>
                    <p className={styles.excerpt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -19,7 +18,7 @@ const BlogCard= ( ) => {
                     </ul>
                     <hr className={styles.Line}></hr>
                   </ul>
-       </>
+       </div>
     );
 };
 

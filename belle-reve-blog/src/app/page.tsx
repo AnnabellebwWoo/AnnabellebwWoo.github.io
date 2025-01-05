@@ -3,7 +3,6 @@ import Intro from '@/components/Intro/Intro';
 import styles from './page.module.css';
 import { getAllPosts } from '@/lib/utils'
 import type { GetStaticProps } from 'next'
-// import { BlogProps } from "@/lib/types";
 
 export default function Home() {
   return (
@@ -12,10 +11,23 @@ export default function Home() {
       <div className={styles.row}>
                   <div className={styles.column}>
                     <BlogCard></BlogCard>
-                      </div>
+                    </div>
                   <div className={styles.column}>
+                  <BlogCard></BlogCard>
                   </div>
                   <div className={styles.column}>
+                  <BlogCard></BlogCard>
+                  </div>
+              </div>
+              <div className={styles.row}>
+                  <div className={styles.column}>
+                    <BlogCard></BlogCard>
+                    </div>
+                  <div className={styles.column}>
+                  <BlogCard></BlogCard>
+                  </div>
+                  <div className={styles.column}>
+                  <BlogCard></BlogCard>
                   </div>
               </div>
     </div>
