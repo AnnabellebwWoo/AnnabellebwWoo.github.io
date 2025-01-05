@@ -4,12 +4,12 @@ import styles from './page.module.css';
 import { getAllPosts } from '@/lib/utils'
 import type { GetStaticProps } from 'next'
 
-export default function Home() {
+export default function Home({ posts, title, description }: BlogProps) {
   return (
     <div>
       <Intro></Intro>
       <div className={styles.row}>
-                  <div className={styles.column}>
+                  {/* <div className={styles.column}>
                     <BlogCard></BlogCard>
                     </div>
                   <div className={styles.column}>
@@ -28,7 +28,8 @@ export default function Home() {
                   </div>
                   <div className={styles.column}>
                   <BlogCard></BlogCard>
-                  </div>
+                  </div> */}
+                 <BlogCard posts={posts} />
               </div>
     </div>
   );
