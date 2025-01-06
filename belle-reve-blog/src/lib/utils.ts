@@ -8,8 +8,8 @@ export async function getFiles(folder: string) {
   return fs.readdirSync(path.join(root, 'data', folder), 'utf-8')
 }
 
-export async function getPostBySlug(slug: string) {
-  const source = fs.readFileSync(path.join(root, 'data', `${slug}.md`), 'utf8')
+export async function getPostBySlug(dataType: string, slug: string) {
+  const source = fs.readFileSync(path.join(root, 'data', dataType, `${slug}.md`), 'utf8')
 
   const { data, content } = matter(source)
 
