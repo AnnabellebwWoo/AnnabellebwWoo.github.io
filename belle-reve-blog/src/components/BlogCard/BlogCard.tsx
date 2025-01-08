@@ -21,7 +21,7 @@ const BlogCard= ( { posts }: BlogPostsProps ) => {
     //    </div>
 
        <div className="posts">
-       {!posts && <div>No posts!</div>}
+       {!posts && <div>Under Construction!</div>}
        <ul>
          {posts &&
            posts
