@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/annabellewoo/Documents/GitHub/AnnabellebwWoo.github.io/src/app/layout\":[\"static/media/60f88b7ed0aaf9b0-s.p.woff2\",\"static/media/dcc209c0b1ab30af-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
