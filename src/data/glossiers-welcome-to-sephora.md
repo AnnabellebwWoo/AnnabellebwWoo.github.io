@@ -1,6 +1,6 @@
 ---
 title: Glossier's Welcome to Sephora
-excerpt: 
+excerpt: Glossier is coming to Sephora stores on February 23rd
 category: beauty
 publishedDate: 02/18/2023
 tags:
