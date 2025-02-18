@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <div className={styles.Logo}>
         <h1>
-          <Link href="/">Belle Reve</Link>
+          <Link href="/blog">Belle Reve</Link>
         </h1>
         <h2>A Lifestyle Blog</h2>
       </div>

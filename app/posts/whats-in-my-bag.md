@@ -2,6 +2,8 @@
 title: What's in My Bag
 categories: [favourites]
 publishedDate: 04/02/2023
+excerpt: Some insight into a few of my favourites!
+tags: bag, beauty
 ---
 
 Bags are custom to every individual, that it’s so intimate finding what others keep in theirs. I love discovering everyone’s favorite items that go beyond the beauty world. Here I’m sharing what I keep in mine.

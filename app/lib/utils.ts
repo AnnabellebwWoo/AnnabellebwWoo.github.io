@@ -20,6 +20,8 @@ export async function getPostBySlug(slug: string) {
     slug: slug,
     markdownBody: content,
     publishedDate: data.publishedDate,
+    excerpt: data.excerpt,
+    tags: typeof data.tags === "string" ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`) : Array.isArray(data.tags) ? data.tags.map((tag: string) => ` ${tag}`) : [],
   };
 }
 
@@ -48,6 +50,8 @@ export async function getAllPosts(): Promise<BlogPostProps[]> {
       slug: postSlug.replace(".md", ""),
       markdownBody: content,
       publishedDate: data.publishedDate,
+      excerpt: data.excerpt,
+      tags: typeof data.tags === "string" ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`) : Array.isArray(data.tags) ? data.tags.map((tag: string) => ` ${tag}`) : [],
     };
   });
 }

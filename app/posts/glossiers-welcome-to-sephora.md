@@ -2,6 +2,8 @@
 title: Glossier's Welcome to Sephora
 categories: [beauty]
 publishedDate: 02/18/2023
+excerpt: Glossier is coming to Sephora stores on February 23rd
+tags: beauty, glossier, sephora
 ---
 
 Glossier’s arrival in Canada has been long awaited. I know all other Canadian beauty lovers have been waiting for this day since 2017 when they launched a small pop-up in Toronto. Finally, fans can get their hands on the skincare-first makeup-second brand on February 23rd.

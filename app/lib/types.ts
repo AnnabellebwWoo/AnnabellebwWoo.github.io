@@ -8,4 +8,6 @@
     slug: string
     markdownBody: string
     publishedDate: string
+    excerpt: string
+    tags: string[]
   }

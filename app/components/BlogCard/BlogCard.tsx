@@ -6,62 +6,17 @@ import { BlogPostProps } from "../../lib/types";
 const BlogCard = ({ post }: { post: BlogPostProps }) => {
   return (
     <div className={styles.container}>
-      {/* <Link href="/article/blog-post">
-        <Image
-          src="/images/Beach.jpg"
-          alt="beach"
-          width={500}
-          height={500}
-          className={styles.image}
-        ></Image>
-      </Link>
-      <ul className={styles.card}>
-        <h1>
-          <Link href="/article/blog-post">Title</Link>
-        </h1>
-        <p className={styles.excerpt}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <hr className={styles.Line}></hr>
-        <ul className={styles.moreInfo}>
-          <li>
-            <Link href="/category/beauty">category</Link>
-          </li>
-          <li>
-            <p>01/02/2025</p>
-          </li>
-        </ul>
-        <hr className={styles.Line}></hr>
-      </ul> */}
-<ul>
-      <li><Link href={{ pathname: "blog/" + post.slug }}>{post.title}</Link></li>
-      <li>{post.publishedDate}</li>
       
+<ul>
+      <li><Link className={styles.title}href={{ pathname: "blog/" + post.slug }}>{post.title}</Link></li>
+      <div className={styles.information}>
+      <li>{post.publishedDate},  <i>{post.categories}</i></li>
+      <li>{post.excerpt}</li>
+      <li>{post.tags.map((tag: string, index: number) => (<span key={index} className={styles.tags}> {tag} </span> ))}</li>
+      </div>
       </ul>
     </div>
 
-    //    <div className="posts">
-    //    {!posts && <div>Under Construction!</div>}
-    //    <ul>
-    //      {posts &&
-    //        posts
-    //          .sort(
-    //            (a, b) =>
-    //              new Date(b.frontMatter.publishedDate).getTime() - new Date(a.frontMatter.publishedDate).getTime(),
-    //          )
-    //          .map((post) => {
-    //            return (
-    //              <article key={post.slug} className="post-title">
-    //                <Link href={{ pathname: `/blog/${post.slug}` }}>
-    //                  <a>{post.frontMatter.title}</a>
-    //                </Link>{' '}
-    //                - {post.frontMatter.description}
-    //                <p>[ {post.frontMatter.tags.join(', ')} ]</p>
-    //              </article>
-    //            )
-    //          })}
-    //    </ul>
-    //  </div>
   );
 };
 
