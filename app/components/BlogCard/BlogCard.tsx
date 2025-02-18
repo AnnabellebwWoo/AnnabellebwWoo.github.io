@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./BlogCard.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import { BlogPostProps } from "../../lib/types";
 
 const BlogCard = ({ post }: { post: BlogPostProps }) => {
@@ -34,8 +33,11 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
         </ul>
         <hr className={styles.Line}></hr>
       </ul> */}
-
-      <Link href={{ pathname: "blog/" + post.slug }}>{post.title}</Link>
+<ul>
+      <li><Link href={{ pathname: "blog/" + post.slug }}>{post.title}</Link></li>
+      <li>{post.publishedDate}</li>
+      
+      </ul>
     </div>
 
     //    <div className="posts">
