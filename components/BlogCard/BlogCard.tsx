@@ -10,13 +10,13 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
     <ul className={styles.container}>
       <li>
         <div className={styles.imageWrapper}>
-          <Image
+          <Link href={{ pathname: "blog/" + post.slug }}><Image
             src={post.thumbnail}
             alt={post.title + " image"}
             width={400}
             height={300}
             className={styles.image}
-          ></Image>
+          ></Image></Link>
         </div>
       </li>
       <li>
