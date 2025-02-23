@@ -26,6 +26,7 @@
 
 .title{
   font-size: xx-large;
+  color: #1d2024;
 }
 
 .information{
@@ -34,6 +35,17 @@
 }
 
 .tags{
-  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.5em 0;  
+}
+
+.tag {
   background-color: lightgray;
+  color: #313439;
+  font-size: small;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
 }
