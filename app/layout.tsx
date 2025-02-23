@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Antic_Didone, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const anticDidone = Antic_Didone({
   subsets: ["latin"],
