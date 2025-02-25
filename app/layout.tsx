@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 
 const anticDidone = Antic_Didone({
   subsets: ["latin"],
-  weight: "400", // Specify weight if needed
+  weight: "400", 
   variable: "--font-antic-didone",
 });
 
@@ -18,6 +18,11 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Belle Reve",
   description: "A lifestyle blog",
+  icons: {
+    icon: "/images/favicon.ico", 
+    shortcut: "/images/favicon.ico", 
+    apple: "/images/favicon.png", 
+  },
 };
 
 export default function RootLayout({
