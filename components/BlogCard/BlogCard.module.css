@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  min-height: 300px;
+  margin: 1em 0;
+}
+
+.imageWrapper{
+  position: relative;
+  width: 400px; 
+  height: 300px;
+  display: flex;
+  margin: 0 1em;
+}
+
+.image{
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.text{
+  padding: 1em;
+}
+
+.title{
+  font-size: xx-large;
+  color: #1d2024;
+}
+
+.information{
+  color: grey;
+  font-size: large;
+}
+
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.5em 0;  
+}
+
+.tag {
+  background-color: lightgray;
+  color: #313439;
+  font-size: small;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}

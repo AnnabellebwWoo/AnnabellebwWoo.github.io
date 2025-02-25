@@ -1,8 +1,8 @@
-import BlogCard from "../components/BlogCard/BlogCard";
-import Intro from "../components/Intro/Intro";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import Intro from "../../components/Intro/Intro";
 import styles from "./page.module.css";
-import { getAllPosts } from "../lib/utils";
-import { BlogPostProps } from "../lib/types";
+import { getAllPosts } from "../../lib/utils";
+// import { BlogPostProps } from "../lib/types";
 
 export default async function Home() {
   const posts = await getAllPosts();
