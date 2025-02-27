@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import BlogLayout from "../../../components/BlogLayout/BlogLayout";
-import { getFiles, getPostBySlug } from "../../../lib/utils";
+import BlogLayout from "../../../../components/BlogLayout/BlogLayout";
+import { getFiles, getPostBySlug } from "../../../../lib/utils";
 import Link from "next/link";
 
 export default async function BlogPost({

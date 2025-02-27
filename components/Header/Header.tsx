@@ -20,22 +20,22 @@ const Header = () => {
             <Link href="/blog">Home</Link>
           </li>
           <li>
-            <Link href="/category/beauty">Beauty</Link>
+            <Link href="/blog/category/beauty">Beauty</Link>
           </li>
           <li>
-            <Link href="/category/clothing">Clothing</Link>
+            <Link href="/blog/category/clothing">Clothing</Link>
           </li>
           <li>
-            <Link href="/category/favourites">Favourites</Link>
+            <Link href="/blog/category/favourites">Favourites</Link>
           </li>
           <li>
-            <Link href="/category/cooking">Cooking</Link>
+            <Link href="/blog/category/cooking">Cooking</Link>
           </li>
           <li>
-            <Link href="/category/opinion">Opinion</Link>
+            <Link href="/blog/category/opinion">Opinion</Link>
           </li>
           <li>
-            <Link href="/category/misc">Misc</Link>
+            <Link href="/blog/category/misc">Misc</Link>
           </li>
           <li>
             <Link href="/about-me">About Me</Link>

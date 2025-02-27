@@ -26,17 +26,6 @@ export async function getPostBySlug(slug: string) {
   };
 }
 
-// export async function getPostsByCategory(category: string) {
-//     const files = fs.readdirSync(path.join(root, 'data'));
-//     return files
-//         .map((file) => {
-//             const source = fs.readFileSync(path.join(root, 'data, file'), 'utf8');
-//             const { data } = matter(source);
-//             return data.category === category ? { frontMatter: data, slug: file.replaceAll('.md', '')}: null;
-//         }
-//     )
-// }
-
 export async function getAllPosts(): Promise<BlogPostProps[]> {
   const files = fs.readdirSync(path.join(root,"public", "posts"));
 
@@ -56,4 +45,9 @@ export async function getAllPosts(): Promise<BlogPostProps[]> {
       thumbnail: data.thumbnail,
     };
   });
+}
+
+export async function getPostsByCategory(category: string): Promise<BlogPostProps[]> {
+  const allPosts = await getAllPosts();
+  return allPosts.filter((post) => post.categories.includes(category));
 }
