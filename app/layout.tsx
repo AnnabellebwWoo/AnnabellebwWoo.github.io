@@ -16,8 +16,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Belle Reve",
-  description: "A lifestyle blog",
+  title: "Belle Reve - A Lifestyle Blog",
   icons: {
     icon: "/images/favicon.ico", 
     shortcut: "/images/favicon.ico", 
