@@ -7,38 +7,38 @@
   margin: 1em 0;
 }
 
-.imageWrapper{
+.imageWrapper {
   position: relative;
-  width: 400px; 
+  width: 400px;
   height: 300px;
   display: flex;
   margin: 0 1em;
 }
 
-.image{
+.image {
   object-fit: cover;
   border-radius: 30px;
 }
 
-.text{
+.text {
   padding: 1em;
 }
 
-.title{
+.title {
   font-size: xx-large;
   color: #1d2024;
 }
 
-.information{
+.information {
   color: grey;
   font-size: large;
 }
 
-.tags{
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  margin: 0.5em 0;  
+  margin: 0.5em 0;
 }
 
 .tag {

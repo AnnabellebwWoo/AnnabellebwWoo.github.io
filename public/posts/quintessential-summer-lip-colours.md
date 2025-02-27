@@ -13,7 +13,7 @@ This lip mask moisturizes your lips while looking so deliciously glossy. It comp
 
 **Glossier Balm Dotcom (Mango)**
 
-This is also a lip balm like the Laneige mask, but a slightly less decadent version. I don't find this formula particularly hydrating, but the delicious mango flavour makes up for it. The packaging is adorable and easy for on-the-go. The shade supposedly has a peachy-rose tint, but I just find it to be clear. 
+This is also a lip balm like the Laneige mask, but a slightly less decadent version. I don't find this formula particularly hydrating, but the delicious mango flavour makes up for it. The packaging is adorable and easy for on-the-go. The shade supposedly has a peachy-rose tint, but I just find it to be clear.
 
 **Tower 28 JuiceBalm (Shake)**
 
@@ -25,4 +25,4 @@ During the day, I wear this layered with the Laneige lip mask to soften it. But 
 
 **Marc Jacobs Enamoured Lip Lacquer (Pretty Thing)**
 
-This product is easily my favourite lip gloss by far. It's a pigmented, nude-rose shade with amazing shine. But it kills me because I'm pretty sure it's discontinued. When I first used it, I was expecting a warm, vanilla scent, but it's actually a refreshing minty smell. 
+This product is easily my favourite lip gloss by far. It's a pigmented, nude-rose shade with amazing shine. But it kills me because I'm pretty sure it's discontinued. When I first used it, I was expecting a warm, vanilla scent, but it's actually a refreshing minty smell.

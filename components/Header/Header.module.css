@@ -1,46 +1,45 @@
 .Logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0 1em;
 }
 
 .Logo h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .Logo h2 {
-    color: rgb(67, 67, 67);
+  color: rgb(67, 67, 67);
 }
 
-.lineWrapper{
-    display: flex;
-    justify-content: center;
+.lineWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .Line {
-    width: 90%;
-    border: 0;
-    border-top: 1px solid #000; 
-    margin: 0.5em 0; 
-
+  width: 90%;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 0.5em 0;
 }
 
 .menuBar {
-    display: flex;
-    width: 80%;
-    justify-content:space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 1rem 0;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .menuBar ul {
-    display: flex;  
-    width: 100%;  
+  display: flex;
+  width: 100%;
 }
 
 .menuBar li {
-    flex: 1;
-    text-align: left;
+  flex: 1;
+  text-align: left;
 }

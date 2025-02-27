@@ -25,8 +25,8 @@ export async function getPostBySlug(slug: string) {
       typeof data.tags === "string"
         ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`)
         : Array.isArray(data.tags)
-        ? data.tags.map((tag: string) => ` ${tag}`)
-        : [],
+          ? data.tags.map((tag: string) => ` ${tag}`)
+          : [],
     thumbnail: data.thumbnail,
   };
 }
@@ -50,15 +50,15 @@ export async function getAllPosts(): Promise<BlogPostProps[]> {
         typeof data.tags === "string"
           ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`)
           : Array.isArray(data.tags)
-          ? data.tags.map((tag: string) => ` ${tag}`)
-          : [],
+            ? data.tags.map((tag: string) => ` ${tag}`)
+            : [],
       thumbnail: data.thumbnail,
     };
   });
 }
 
 export async function getPostsByCategory(
-  category: string
+  category: string,
 ): Promise<BlogPostProps[]> {
   const allPosts = await getAllPosts();
   return allPosts.filter((post) => post.categories.includes(category));
