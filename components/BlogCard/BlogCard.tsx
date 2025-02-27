@@ -10,13 +10,15 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
     <ul className={styles.container}>
       <li>
         <div className={styles.imageWrapper}>
-          <Link href={{ pathname: "blog/" + post.slug }}><Image
-            src={post.thumbnail}
-            alt={post.title + " image"}
-            width={400}
-            height={300}
-            className={styles.image}
-          ></Image></Link>
+          <Link href={{ pathname: "blog/" + post.slug }}>
+            <Image
+              src={post.thumbnail}
+              alt={post.title + " image"}
+              width={400}
+              height={300}
+              className={styles.image}
+            ></Image>
+          </Link>
         </div>
       </li>
       <li>
@@ -34,8 +36,13 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
               {post.publishedDate}, <i>{post.categories}</i>
             </li>
             <li>{post.excerpt}</li>
-            <li className={styles.tags}>{post.tags.map((tag, index) => (<span key={index} className={styles.tag}>{tag}</span>)
-          )}</li>
+            <li className={styles.tags}>
+              {post.tags.map((tag, index) => (
+                <span key={index} className={styles.tag}>
+                  {tag}
+                </span>
+              ))}
+            </li>
           </div>
         </ul>
       </li>
