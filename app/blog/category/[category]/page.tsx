@@ -2,6 +2,7 @@ import { getPostsByCategory } from "../../../../lib/utils";
 import BlogCard from "../../../../components/BlogCard/BlogCard";
 import styles from "./page.module.css";
 
+
 export default async function CategoryPage({
   params,
 }: {
