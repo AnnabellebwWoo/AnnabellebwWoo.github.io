@@ -5,7 +5,6 @@ import { BlogPostProps } from "../../lib/types";
 import Image from "next/image";
 
 const BlogCard = ({ post }: { post: BlogPostProps }) => {
-  console.log("Image URL:", post.thumbnail);
   return (
     <ul className={styles.container}>
       <li>

@@ -17,7 +17,7 @@ export default async function BlogPost({
   }
 
   return (
-    <BlogLayout>
+    <BlogLayout post={post}>
       <ReactMarkdown
         components={{
           a: ({ href, children }) => <Link href={href || "#"}>{children}</Link>,
