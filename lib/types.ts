@@ -12,3 +12,7 @@ export type BlogPostProps = {
   tags: string[];
   thumbnail: string;
 };
+
+export type Section =
+  | { type: "text"; content: string[] }
+  | { type: "image"; content: string[] };
