@@ -13,6 +13,6 @@ export type BlogPostProps = {
   thumbnail: string;
 };
 
-export type Section =
-  | { type: "text"; content: string[] }
+export type Section = 
+  | { type: "text"; content: React.ReactNode[] }
   | { type: "image"; content: string[] };
