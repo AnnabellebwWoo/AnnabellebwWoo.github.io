@@ -11,4 +11,10 @@ export type BlogPostProps = {
   excerpt: string;
   tags: string[];
   thumbnail: string;
+  previous?: BlogPostProps;
+  next?: BlogPostProps;
 };
+
+export type Section = 
+  | { type: "text"; content: React.ReactNode[] }
+  | { type: "image"; content: string[] };
