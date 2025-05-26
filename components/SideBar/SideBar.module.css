@@ -1,0 +1,29 @@
+.sidebar {
+    flex: 1; 
+    top: 2rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+.sidebar section {
+   margin-bottom: 2rem;
+ }
+  
+.sidebar h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.socials li {
+    display: flex;
+    align-items: center;
+}
