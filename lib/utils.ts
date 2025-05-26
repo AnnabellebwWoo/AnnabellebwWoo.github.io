@@ -63,3 +63,15 @@ export async function getPostsByCategory(
   const allPosts = await getAllPosts();
   return allPosts.filter((post) => post.categories.includes(category));
 }
+
+export async function getAdjacentPosts(
+  slug: string,
+): Promise<{ previous: BlogPostProps | null; next: BlogPostProps | null }> {
+  const posts = await getAllPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+
+  const previous = index > 0 ? posts[index - 1] : null;
+  const next = index < posts.length - 1 ? posts[index + 1] : null;
+
+  return { previous, next };
+}

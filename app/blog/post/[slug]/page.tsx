@@ -1,6 +1,6 @@
 import React from "react";
 import BlogLayout from "../../../../components/BlogLayout/BlogLayout";
-import { getFiles, getPostBySlug } from "../../../../lib/utils";
+import { getFiles, getPostBySlug, getAdjacentPosts } from "../../../../lib/utils";
 import { parseMarkdownToSections } from "../../../../lib/parseMarkdown";
 import Image from "next/image";
 import type { Section } from "../../../../lib/types";
@@ -12,6 +12,7 @@ export default async function BlogPost({
 }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
+  const { previous, next } = await getAdjacentPosts(slug);
 
   if (!post) {
     return <div>Post not found</div>;
@@ -20,7 +21,7 @@ export default async function BlogPost({
   const sections: Section[] = parseMarkdownToSections(post.markdownBody);
 
   return (
-    <BlogLayout post={post}>
+      <BlogLayout post={post} previous={previous} next={next}>
       <article className="prose prose-lg max-w-none">
         {sections.map((section, i) => {
           if (section.type === "text") {

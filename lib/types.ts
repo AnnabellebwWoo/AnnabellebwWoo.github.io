@@ -11,6 +11,8 @@ export type BlogPostProps = {
   excerpt: string;
   tags: string[];
   thumbnail: string;
+  previous?: BlogPostProps;
+  next?: BlogPostProps;
 };
 
 export type Section = 
