@@ -8,6 +8,18 @@ const Sidebar = () => {
     <aside className={styles.sidebar}>
       <section>
         <h3>Featured Post</h3>
+        <ul>
+          <Link href="/blog/post/prom-2023">
+            <Image
+              src="/images/prom.jpg"
+              width={250}
+              height={250}
+              alt="prom"
+            ></Image>
+            <h2>Prom 2023</h2>
+            <h4>Read more</h4>{" "}
+          </Link>
+        </ul>
       </section>
       <section>
         <h3>Keep In Touch</h3>
@@ -16,8 +28,8 @@ const Sidebar = () => {
             <Link href="mailto:bellereveblog@gmail.com">
               <Image
                 src="/images/email.png"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Email Icon"
               ></Image>
             </Link>
@@ -26,8 +38,8 @@ const Sidebar = () => {
             <Link href="https://www.instagram.com/bellereveblog/">
               <Image
                 src="/images/instagram.png"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Instagram Icon"
               ></Image>
             </Link>
@@ -36,8 +48,8 @@ const Sidebar = () => {
             <Link href="https://www.tiktok.com/@bellereveblog">
               <Image
                 src="/images/tiktok.png"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="TikTok Icon"
               ></Image>
             </Link>
@@ -46,8 +58,8 @@ const Sidebar = () => {
             <Link href="https://open.spotify.com/user/annabellewoo911?si=5fbc0531a04d48cd">
               <Image
                 src="/images/spotify.png"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Spotify Icon"
               ></Image>
             </Link>
@@ -58,10 +70,10 @@ const Sidebar = () => {
         <h3>Recent Posts</h3>
         <ul>
           <li>
-            <a href="/post/slug1">Recent Post 1</a>
+            <Link href="/post/slug1">Recent Post 1</Link>
           </li>
           <li>
-            <a href="/post/slug2">Recent Post 2</a>
+            <Link href="/post/slug2">Recent Post 2</Link>
           </li>
         </ul>
       </section>
