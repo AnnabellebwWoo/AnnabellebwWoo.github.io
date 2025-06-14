@@ -8,11 +8,12 @@
 
 .sidebar section {
   margin-bottom: 2rem;
+  border-top: 1px solid #ccc;
 }
 
 .sidebar h3 {
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .socials {
@@ -34,13 +35,13 @@
 }
 
 .sidebar h2 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .sidebar h4 {
   color: grey;
 }
 
-.sidebar image {
-  border-radius: 30px;
+.featuredImage {
+  border-radius: 20px;
 }

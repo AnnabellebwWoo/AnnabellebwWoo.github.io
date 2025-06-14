@@ -15,8 +15,9 @@ const Sidebar = () => {
               width={250}
               height={250}
               alt="prom"
+              className={styles.featuredImage}
             ></Image>
-            <h2>Prom 2023</h2>
+            <h2><i>Prom 2023</i></h2>
             <h4>Read more</h4>{" "}
           </Link>
         </ul>

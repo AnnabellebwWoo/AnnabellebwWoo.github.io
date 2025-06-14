@@ -1,21 +1,21 @@
-import React, { ReactNode } from "react";
-import { BlogPostProps } from "../../lib/types";
+// import React, { ReactNode } from "react";
+import { Section, BlogPostProps } from "../../lib/types";
 import Image from "next/image";
 import styles from "./BlogLayout.module.css";
 import Link from "next/link";
+// import { parseMarkdownToSections } from "../../lib/parseMarkdown";
 
 const BlogLayout = ({
   post,
   previous,
   next,
-  children,
+  sections,
 }: {
   post: BlogPostProps;
   previous?: BlogPostProps | null;
   next?: BlogPostProps | null;
-  children: ReactNode;
+  sections: Section[];
 }) => {
-
   return (
     <div className={styles.container}>
       {post.thumbnail && post.thumbnail.trim() !== "" && (
@@ -40,20 +40,38 @@ const BlogLayout = ({
           ))}
         </li>
       </ul>
-      <div className={styles.children}>{children}</div>
-      <div className={styles.navigation}>
-  {previous && (
-    <Link href={`/blog/post/${previous.slug}`} className={styles.navLink}>
-      ← Previous Post: {previous.title}
-    </Link>
-  )}
-  {next && (
-    <Link href={`/blog/post/${next.slug}`} className={styles.navLink}>
-      Next Post: {next.title} →
-    </Link>
-  )}
+<div className={styles.children}>
+  {sections.map((section, index) => {
+    if (section.type === "text") {
+      return <div key={index}>{section.content}</div>;
+    }
+    if (section.type === "image") {
+      return section.content.map((url, i) => (
+        <Image
+          key={`${index}-${i}`}
+          src={url}
+          alt={`Image ${i}`}
+          width={600}
+          height={400}
+          className={styles.image}
+        />
+      ));
+    }
+    return null;
+  })}
 </div>
-
+      <div className={styles.navigation}>
+        {previous && (
+          <Link href={`/blog/post/${previous.slug}`} className={styles.navLink}>
+            ← Previous Post: {previous.title}
+          </Link>
+        )}
+        {next && (
+          <Link href={`/blog/post/${next.slug}`} className={styles.navLink}>
+            Next Post: {next.title} →
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
