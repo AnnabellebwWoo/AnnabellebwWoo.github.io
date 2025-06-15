@@ -19,7 +19,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
               className={styles.featuredImage}
             ></Image>
             <h2>
-              <i>Prom 2023</i>
+              Prom 2023
             </h2>
             <h4>Read more...</h4>{" "}
           </Link>
@@ -83,8 +83,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
                   height={250}
                   className={styles.featuredImage}
                 ></Image>
-                <h2>
-                  <i>{post.title}</i>
+                <h2>{post.title}
                 </h2>
                 <h4>Read more...</h4>{" "}
               </Link>
