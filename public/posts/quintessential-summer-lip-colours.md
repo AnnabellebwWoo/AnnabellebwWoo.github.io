@@ -2,7 +2,7 @@
 title: Quintessential Summer Lip Colours
 excerpt: Juicy summer lip product picks.
 categories: [beauty]
-publishedDate: 07/06/2023
+publishedDate: "2023-06-07"
 tags: beauty, glossier, laneige, lip, lip-balm, lip-gloss, makeup, marc-jacobs, r-e-m-beauty, summer, tower-28
 thumbnail: "/images/summer-lip.jpg"
 ---

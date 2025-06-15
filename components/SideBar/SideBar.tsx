@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./Sidebar.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import type { BlogPostProps } from "../../lib/types";
 
-const Sidebar = () => {
+const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
   return (
     <aside className={styles.sidebar}>
       <section>
@@ -17,8 +18,10 @@ const Sidebar = () => {
               alt="prom"
               className={styles.featuredImage}
             ></Image>
-            <h2><i>Prom 2023</i></h2>
-            <h4>Read more</h4>{" "}
+            <h2>
+              <i>Prom 2023</i>
+            </h2>
+            <h4>Read more...</h4>{" "}
           </Link>
         </ul>
       </section>
@@ -70,12 +73,23 @@ const Sidebar = () => {
       <section>
         <h3>Recent Posts</h3>
         <ul>
-          <li>
-            <Link href="/post/slug1">Recent Post 1</Link>
-          </li>
-          <li>
-            <Link href="/post/slug2">Recent Post 2</Link>
-          </li>
+          {recentPosts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/blog/post/${post.slug}`}>
+                <Image
+                  src={post.thumbnail}
+                  alt={post.title + " image"}
+                  width={250}
+                  height={250}
+                  className={styles.featuredImage}
+                ></Image>
+                <h2>
+                  <i>{post.title}</i>
+                </h2>
+                <h4>Read more...</h4>{" "}
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
     </aside>

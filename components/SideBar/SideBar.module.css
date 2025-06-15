@@ -36,10 +36,12 @@
 
 .sidebar h2 {
   font-size: 1.25rem;
+  text-decoration: none;
 }
 
 .sidebar h4 {
   color: grey;
+  margin-bottom: 1rem;
 }
 
 .featuredImage {

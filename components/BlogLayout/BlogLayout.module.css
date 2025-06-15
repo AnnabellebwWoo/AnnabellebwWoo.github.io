@@ -33,11 +33,16 @@
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
+  margin-bottom: 1.2rem;
 }
 
 .children p {
   margin-bottom: 1.2rem;
   line-height: 1.75;
+}
+
+.children {
+  border-top: 1px solid #ccc;
 }
 
 .navigation {

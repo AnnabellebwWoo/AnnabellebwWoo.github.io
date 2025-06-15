@@ -25,8 +25,8 @@ export async function getPostBySlug(slug: string) {
       typeof data.tags === "string"
         ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`)
         : Array.isArray(data.tags)
-          ? data.tags.map((tag: string) => ` ${tag}`)
-          : [],
+        ? data.tags.map((tag: string) => ` ${tag}`)
+        : [],
     thumbnail: data.thumbnail,
   };
 }
@@ -34,7 +34,7 @@ export async function getPostBySlug(slug: string) {
 export async function getAllPosts(): Promise<BlogPostProps[]> {
   const files = fs.readdirSync(path.join(root, "public", "posts"));
 
-  return files.map((postSlug) => {
+  const posts = files.map((postSlug) => {
     const filePath = path.join(root, "public", "posts", postSlug);
     const source = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(source);
@@ -50,22 +50,28 @@ export async function getAllPosts(): Promise<BlogPostProps[]> {
         typeof data.tags === "string"
           ? data.tags.split(",").map((tag: string) => ` ${tag.trim()}`)
           : Array.isArray(data.tags)
-            ? data.tags.map((tag: string) => ` ${tag}`)
-            : [],
+          ? data.tags.map((tag: string) => ` ${tag}`)
+          : [],
       thumbnail: data.thumbnail,
     };
+  });
+
+  return posts.sort((a, b) => {
+    return (
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+    );
   });
 }
 
 export async function getPostsByCategory(
-  category: string,
+  category: string
 ): Promise<BlogPostProps[]> {
   const allPosts = await getAllPosts();
   return allPosts.filter((post) => post.categories.includes(category));
 }
 
 export async function getAdjacentPosts(
-  slug: string,
+  slug: string
 ): Promise<{ previous: BlogPostProps | null; next: BlogPostProps | null }> {
   const posts = await getAllPosts();
   const index = posts.findIndex((p) => p.slug === slug);
@@ -74,4 +80,16 @@ export async function getAdjacentPosts(
   const next = index < posts.length - 1 ? posts[index + 1] : null;
 
   return { previous, next };
+}
+
+export async function getRecentPosts(count = 2): Promise<BlogPostProps[]> {
+  const allPosts = await getAllPosts();
+
+  const sorted = allPosts.sort((a, b) => {
+    return (
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+    );
+  });
+
+  return sorted.slice(0, count);
 }
