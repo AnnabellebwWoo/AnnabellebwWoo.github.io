@@ -2,12 +2,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import { visit } from "unist-util-visit";
 import type { Section } from "./types";
-import type {
-  Root,
-  Paragraph,
-  Image,
-  Link as MdastLink,
-} from "mdast";
+import type { Root, Paragraph, Image, Link as MdastLink } from "mdast";
 import Link from "next/link";
 import React from "react";
 
@@ -49,7 +44,10 @@ export function parseMarkdownToSections(markdown: string): Section[] {
     });
 
     if (content.length > 0) {
-      sections.push({ type: "text", content });
+      sections.push({
+        type: "text",
+        content: <p>{content}</p>,
+      });
     }
   });
 

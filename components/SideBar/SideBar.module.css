@@ -1,0 +1,49 @@
+.sidebar {
+  flex: 1;
+  top: 2rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sidebar section {
+  margin-bottom: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+.sidebar h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.sidebar ul {
+  margin-left: 1rem;
+}
+
+.socials li {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.sidebar h4 {
+  color: grey;
+  margin-bottom: 1rem;
+}
+
+.featuredImage {
+  border-radius: 20px;
+}

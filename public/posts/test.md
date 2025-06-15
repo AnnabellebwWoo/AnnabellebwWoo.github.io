@@ -1,7 +1,7 @@
 ---
 title: test post
 categories: [beauty]
-publishedDate: 05/25/2025
+publishedDate: "2025-05-25"
 excerpt: test, test, test....
 tags: test, testing
 thumbnail: "/images/glossier.jpg"

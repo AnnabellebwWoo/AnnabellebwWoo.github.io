@@ -1,53 +1,58 @@
 .container {
-    width: 100%;
-    max-width: 85%; 
-    margin: 0 auto;
-    padding: 1rem;}
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
 .title {
-    font-size: xx-large;
-    padding: 0.5em 0 0;
+  font-size: xx-large;
+  padding: 0.5em 0 0;
 }
 
 .image {
-    border-radius: 30px;
+  border-radius: 30px;
 }
 
 .info {
-    gap: 0.5em;
-    font-size: large;
+  gap: 0.5em;
+  font-size: large;
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin: 0.5em 0;
-  }
-  
-  .tag {
-    background-color: lightgray;
-    color: #313439;
-    font-size: small;
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.5em 0;
+}
+
+.tag {
+  background-color: lightgray;
+  color: #313439;
+  font-size: small;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.children p {
+  margin-bottom: 1.2rem;
+  line-height: 1.75;
+}
+
 .children {
-    font-size: large;
-    line-height: 170%;
+  border-top: 1px solid #ccc;
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ccc;
-  }
-  
-  .navLink {
-    font-size: large;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ccc;
+}
+
+.navLink {
+  font-size: large;
+}

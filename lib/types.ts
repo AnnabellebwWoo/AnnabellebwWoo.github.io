@@ -16,5 +16,5 @@ export type BlogPostProps = {
 };
 
 export type Section = 
-  | { type: "text"; content: React.ReactNode[] }
+  | { type: "text"; content: React.ReactNode }
   | { type: "image"; content: string[] };
