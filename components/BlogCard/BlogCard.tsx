@@ -9,7 +9,7 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
     <ul className={styles.container}>
       <li>
         <div className={styles.imageWrapper}>
-          <Link href={{ pathname: "blog/post/" + post.slug }}>
+          <Link href={{ pathname: "/blog/post/" + post.slug }}>
             <Image
               src={post.thumbnail}
               alt={post.title + " image"}
@@ -25,7 +25,7 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
           <li>
             <Link
               className={styles.title}
-              href={{ pathname: "blog/post/" + post.slug }}
+              href={{ pathname: "/blog/post/" + post.slug }}
             >
               {post.title}
             </Link>

@@ -28,7 +28,12 @@ const BlogLayout = ({
       <div className={styles.title}>{post.title}</div>
       <ul className={styles.info}>
         <li>
-          {new Date(post.publishedDate).toLocaleDateString()}{" "}
+          {new Date(post.publishedDate).toLocaleDateString("en-CA", {
+            timeZone: "America/Toronto", // or your preferred zone
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}{" "}
           <i>{post.categories.join(", ")}</i>
         </li>
 
