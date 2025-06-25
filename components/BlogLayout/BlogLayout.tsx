@@ -2,6 +2,7 @@ import { Section, BlogPostProps } from "../../lib/types";
 import Image from "next/image";
 import styles from "./BlogLayout.module.css";
 import Link from "next/link";
+import React from "react";
 
 const BlogLayout = ({
   post,
