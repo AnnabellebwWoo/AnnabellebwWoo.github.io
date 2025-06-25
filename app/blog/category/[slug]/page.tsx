@@ -1,14 +1,14 @@
+import React from "react";
 import { getPostsByCategory } from "../../../../lib/utils";
 import BlogCard from "../../../../components/BlogCard/BlogCard";
 import styles from "./page.module.css";
 
-
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const posts = await getPostsByCategory(params.category);
+  const posts = await getPostsByCategory((await params).slug);
   return (
     <div>
       <div className={styles.row}>
