@@ -2,7 +2,7 @@
 title: Tiramisu
 excerpt: Easiest tiramisu recipe straight from Veneto, Italy.
 categories: [cooking]
-publishedDate: "2024-07-04"
+publishedDate: "2024-07-04T12:00:00"
 tags: baking, dessert, tiramisu
 thumbnail: "/images/tiramisu.jpg"
 ---

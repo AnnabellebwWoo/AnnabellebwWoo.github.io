@@ -1,7 +1,7 @@
 ---
 title: What's in My Bag
 categories: [favourites]
-publishedDate: "2023-04-02"
+publishedDate: "2023-04-02T12:00:00"
 excerpt: Some insight into a few of my favourites!
 tags: bag, beauty
 thumbnail: "/images/purse.jpg"

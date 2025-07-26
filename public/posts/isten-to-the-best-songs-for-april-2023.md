@@ -2,7 +2,7 @@
 title: Listen to the Best Songs for April 2023
 excerpt: Give a listen to some of my new favourite music for spring.
 categories: [favourites]
-publishedDate: "2023-04-18"
+publishedDate: "2023-04-18T12:00:00"
 tags: april, favourites, music, playlist, spring
 thumbnail: "/images/garden-flowers.jpg"
 ---
