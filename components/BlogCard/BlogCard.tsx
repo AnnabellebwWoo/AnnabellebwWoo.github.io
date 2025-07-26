@@ -32,7 +32,12 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
           </li>
           <div className={styles.information}>
             <li>
-              {post.publishedDate}, <i>{post.categories}</i>
+              {new Date(post.publishedDate).toLocaleDateString("en-CA", {
+            timeZone: "America/Toronto", 
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}, <i>{post.categories}</i>
             </li>
             <li>{post.excerpt}</li>
             <li className={styles.tags}>

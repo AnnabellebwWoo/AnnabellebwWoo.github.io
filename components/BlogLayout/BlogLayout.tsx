@@ -30,7 +30,7 @@ const BlogLayout = ({
       <ul className={styles.info}>
         <li>
           {new Date(post.publishedDate).toLocaleDateString("en-CA", {
-            timeZone: "America/Toronto", // or your preferred zone
+            timeZone: "America/Toronto", 
             year: "numeric",
             month: "long",
             day: "numeric",
