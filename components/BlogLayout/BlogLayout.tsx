@@ -2,6 +2,7 @@ import { Section, BlogPostProps } from "../../lib/types";
 import Image from "next/image";
 import styles from "./BlogLayout.module.css";
 import Link from "next/link";
+import React from "react";
 
 const BlogLayout = ({
   post,
@@ -28,7 +29,12 @@ const BlogLayout = ({
       <div className={styles.title}>{post.title}</div>
       <ul className={styles.info}>
         <li>
-          {new Date(post.publishedDate).toLocaleDateString()}{" "}
+          {new Date(post.publishedDate).toLocaleDateString("en-CA", {
+            timeZone: "America/Toronto", 
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}{" "}
           <i>{post.categories.join(", ")}</i>
         </li>
 

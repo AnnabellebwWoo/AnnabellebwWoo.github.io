@@ -9,7 +9,7 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
     <ul className={styles.container}>
       <li>
         <div className={styles.imageWrapper}>
-          <Link href={{ pathname: "blog/post/" + post.slug }}>
+          <Link href={{ pathname: "/blog/post/" + post.slug }}>
             <Image
               src={post.thumbnail}
               alt={post.title + " image"}
@@ -25,14 +25,19 @@ const BlogCard = ({ post }: { post: BlogPostProps }) => {
           <li>
             <Link
               className={styles.title}
-              href={{ pathname: "blog/post/" + post.slug }}
+              href={{ pathname: "/blog/post/" + post.slug }}
             >
               {post.title}
             </Link>
           </li>
           <div className={styles.information}>
             <li>
-              {post.publishedDate}, <i>{post.categories}</i>
+              {new Date(post.publishedDate).toLocaleDateString("en-CA", {
+            timeZone: "America/Toronto", 
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}, <i>{post.categories}</i>
             </li>
             <li>{post.excerpt}</li>
             <li className={styles.tags}>
