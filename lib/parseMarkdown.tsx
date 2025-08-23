@@ -14,15 +14,35 @@ import type { Section } from "./types";
 import Link from "next/link";
 import React from "react";
 
+function renderNodeChildren(children: any[]): React.ReactNode[] {
+  return children.map((child, idx) => {
+    if (child.type === "text") {
+      return <React.Fragment key={idx}>{child.value}</React.Fragment>;
+    }
+    if (child.type === "link") {
+      const link = child as MdastLink;
+      return (
+        <Link key={idx} href={link.url}>
+          {link.children.map((sub, subIdx) =>
+            sub.type === "text" ? (
+              <React.Fragment key={subIdx}>{sub.value}</React.Fragment>
+            ) : null
+          )}
+        </Link>
+      );
+    }
+    return null;
+  });
+}
+
 export function parseMarkdownToSections(markdown: string): Section[] {
   const tree = unified().use(remarkParse).parse(markdown) as Root;
   const sections: Section[] = [];
 
   visit(tree, ["paragraph", "heading", "list"], (node, index, parent) => {
     if (node.type === "paragraph") {
-      if (parent && parent.type === "listItem") {
-        return;
-      }
+      if (parent && parent.type === "listItem") return;
+
       const paragraph = node as Paragraph;
 
       const imageParts = paragraph.children
@@ -34,45 +54,16 @@ export function parseMarkdownToSections(markdown: string): Section[] {
         return;
       }
 
-      const content: React.ReactNode[] = paragraph.children.map(
-        (child, idx) => {
-          if (child.type === "text") {
-            return <React.Fragment key={idx}>{child.value}</React.Fragment>;
-          }
-
-          if (child.type === "link") {
-            const link = child as MdastLink;
-            return (
-              <Link key={idx} href={link.url}>
-                {link.children.map((sub, subIdx) =>
-                  sub.type === "text" ? (
-                    <React.Fragment key={subIdx}>{sub.value}</React.Fragment>
-                  ) : null
-                )}
-              </Link>
-            );
-          }
-
-          return null;
-        }
-      );
+      const content = renderNodeChildren(paragraph.children);
 
       if (content.length > 0) {
-        sections.push({
-          type: "text",
-          content: <p>{content}</p>,
-        });
+        sections.push({ type: "text", content: <p>{content}</p> });
       }
     } else if (node.type === "heading") {
       const heading = node as Heading;
       const level = heading.depth;
 
-      const content = heading.children.map((child, idx) => {
-        if (child.type === "text") {
-          return <React.Fragment key={idx}>{child.value}</React.Fragment>;
-        }
-        return null;
-      });
+      const content = renderNodeChildren(heading.children);
 
       sections.push({
         type: "heading",
@@ -86,16 +77,7 @@ export function parseMarkdownToSections(markdown: string): Section[] {
 
         const itemContent = listItem.children.map((child) => {
           if (child.type === "paragraph") {
-            return child.children.map((grandChild, grandIdx) => {
-              if (grandChild.type === "text") {
-                return (
-                  <React.Fragment key={grandIdx}>
-                    {grandChild.value}
-                  </React.Fragment>
-                );
-              }
-              return null;
-            });
+            return renderNodeChildren(child.children);
           }
           return null;
         });
@@ -103,16 +85,9 @@ export function parseMarkdownToSections(markdown: string): Section[] {
         return <li key={idx}>{itemContent}</li>;
       });
 
-      const listElement = listNode.ordered ? (
-        <ol>{listItems}</ol>
-      ) : (
-        <ul>{listItems}</ul>
-      );
+      const listElement = listNode.ordered ? <ol>{listItems}</ol> : <ul>{listItems}</ul>;
 
-      sections.push({
-        type: "list",
-        content: listElement,
-      });
+      sections.push({ type: "list", content: listElement });
     }
   });
 
