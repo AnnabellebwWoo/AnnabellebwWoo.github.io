@@ -3,6 +3,7 @@ import { Antic_Didone, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const anticDidone = Antic_Didone({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header></Header>
         <main>{children}</main>
         <Footer></Footer>
+        <Analytics />
       </body>
     </html>
   );

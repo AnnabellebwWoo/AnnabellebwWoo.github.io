@@ -1,8 +1,16 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import { visit } from "unist-util-visit";
+import type {
+  Root,
+  Paragraph,
+  Image,
+  Link as MdastLink,
+  Heading,
+  List,
+  ListItem,
+} from "mdast";
 import type { Section } from "./types";
-import type { Root, Paragraph, Image, Link as MdastLink } from "mdast";
 import Link from "next/link";
 import React from "react";
 
@@ -10,43 +18,100 @@ export function parseMarkdownToSections(markdown: string): Section[] {
   const tree = unified().use(remarkParse).parse(markdown) as Root;
   const sections: Section[] = [];
 
-  visit(tree, "paragraph", (node) => {
-    const paragraph = node as Paragraph;
+  visit(tree, ["paragraph", "heading", "list"], (node, index, parent) => {
+    if (node.type === "paragraph") {
+      if (parent && parent.type === "listItem") {
+        return;
+      }
+      const paragraph = node as Paragraph;
 
-    const imageParts = paragraph.children
-      .filter((child): child is Image => child.type === "image")
-      .map((child) => child.url);
+      const imageParts = paragraph.children
+        .filter((child): child is Image => child.type === "image")
+        .map((child) => child.url);
 
-    if (imageParts.length > 0) {
-      sections.push({ type: "image", content: imageParts });
-      return;
-    }
-
-    const content: React.ReactNode[] = paragraph.children.map((child, idx) => {
-      if (child.type === "text") {
-        return <React.Fragment key={idx}>{child.value}</React.Fragment>;
+      if (imageParts.length > 0) {
+        sections.push({ type: "image", content: imageParts });
+        return;
       }
 
-      if (child.type === "link") {
-        const link = child as MdastLink;
-        return (
-          <Link key={idx} href={link.url}>
-            {link.children.map((sub, subIdx) =>
-              sub.type === "text" ? (
-                <React.Fragment key={subIdx}>{sub.value}</React.Fragment>
-              ) : null
-            )}
-          </Link>
-        );
+      const content: React.ReactNode[] = paragraph.children.map(
+        (child, idx) => {
+          if (child.type === "text") {
+            return <React.Fragment key={idx}>{child.value}</React.Fragment>;
+          }
+
+          if (child.type === "link") {
+            const link = child as MdastLink;
+            return (
+              <Link key={idx} href={link.url}>
+                {link.children.map((sub, subIdx) =>
+                  sub.type === "text" ? (
+                    <React.Fragment key={subIdx}>{sub.value}</React.Fragment>
+                  ) : null
+                )}
+              </Link>
+            );
+          }
+
+          return null;
+        }
+      );
+
+      if (content.length > 0) {
+        sections.push({
+          type: "text",
+          content: <p>{content}</p>,
+        });
       }
+    } else if (node.type === "heading") {
+      const heading = node as Heading;
+      const level = heading.depth;
 
-      return null;
-    });
+      const content = heading.children.map((child, idx) => {
+        if (child.type === "text") {
+          return <React.Fragment key={idx}>{child.value}</React.Fragment>;
+        }
+        return null;
+      });
 
-    if (content.length > 0) {
       sections.push({
-        type: "text",
-        content: <p>{content}</p>,
+        type: "heading",
+        content: React.createElement(`h${level}`, {}, content),
+      });
+    } else if (node.type === "list") {
+      const listNode = node as List;
+
+      const listItems = listNode.children.map((item, idx) => {
+        const listItem = item as ListItem;
+
+        const itemContent = listItem.children.map((child) => {
+          if (child.type === "paragraph") {
+            return child.children.map((grandChild, grandIdx) => {
+              if (grandChild.type === "text") {
+                return (
+                  <React.Fragment key={grandIdx}>
+                    {grandChild.value}
+                  </React.Fragment>
+                );
+              }
+              return null;
+            });
+          }
+          return null;
+        });
+
+        return <li key={idx}>{itemContent}</li>;
+      });
+
+      const listElement = listNode.ordered ? (
+        <ol>{listItems}</ol>
+      ) : (
+        <ul>{listItems}</ul>
+      );
+
+      sections.push({
+        type: "list",
+        content: listElement,
       });
     }
   });

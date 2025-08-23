@@ -30,7 +30,7 @@ const BlogLayout = ({
       <ul className={styles.info}>
         <li>
           {new Date(post.publishedDate).toLocaleDateString("en-CA", {
-            timeZone: "America/Toronto", 
+            timeZone: "America/Toronto",
             year: "numeric",
             month: "long",
             day: "numeric",
@@ -62,6 +62,18 @@ const BlogLayout = ({
                 className={styles.image}
               />
             ));
+          }
+          if (section.type === "heading") {
+            return (
+              <div key={index} className={styles.headingSection}>
+                {section.content}
+              </div>
+            );
+          }
+          if (section.type === "list") {
+            return (
+              <React.Fragment key={index}>{section.content}</React.Fragment>
+            );
           }
           return null;
         })}
