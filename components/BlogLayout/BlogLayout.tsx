@@ -21,8 +21,8 @@ const BlogLayout = ({
         <Image
           src={post.thumbnail}
           alt={post.title + " image"}
-          width={400}
-          height={300}
+          width={800}
+          height={600}
           className={styles.image}
         ></Image>
       )}

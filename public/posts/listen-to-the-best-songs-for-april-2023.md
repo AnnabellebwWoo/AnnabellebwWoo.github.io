@@ -4,7 +4,7 @@ excerpt: Give a listen to some of my new favourite music for spring.
 categories: [favourites]
 publishedDate: "2023-04-18T12:00:00"
 tags: april, favourites, music, playlist, spring
-thumbnail: "/images/garden-flowers.jpg"
+thumbnail: "/images/cherry-blossoms.jpg"
 ---
 
 Some of my newly discovered to long-time favourite songs I’m listening to this month.
