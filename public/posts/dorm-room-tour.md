@@ -4,50 +4,25 @@ excerpt: Some bits and pieces of my room.
 categories: [misc]
 publishedDate: "2024-01-07T12:00:00"
 tags: dorm, room, room tour, university
-thumbnail: "/images/gift-guide-2023.jpg"
+thumbnail: "/images/room-pins.jpg"
 ---
 
-Whether it's for your Mom or your coworker, I have put together the ultimate gift guide for her this holiday season. This is the first year I'm giving actual gifts to my family. So after hours of research, I have decided to share my collected research to you. Personally, I'm tired of seeing bathrobes and mugs on these so-called "best" gift guides. Gifting is more than just exchanging goods, it's about [hey man, I love you this many dollars worth](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpewdiepie.getyarn.io%2Fyarn-clip%2F746d08de-05a9-4e01-983f-4f4db2c45b3d%2Fgif&psig=AOvVaw1BFXAarnsLCpjLgxcEInlG&ust=1760030484162000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjN49GOlZADFQAAAAAdAAAAABAL). Gifting is just a nice way to show that person that they deserve to treat themselves. Below, the best gifts for the girl(s) in your life.
+Welcome to my dorm room! It isn't exactly the cutest ever, but I like it. When I first moved in, I felt out of place so I filled it with things that felt familiar and represented home.
 
-# Cocktail Glasses
-![cocktail coupe glasses](/images/coupe-glasses.jpg)
+On my desk, I have a small Metskiie print and a school poster to keep me motivated. I also keep my singular, unnecessary textbook, as well as some magazines and books.
 
-# Reformer Pilate Classes
+![desk overhead](/images/desk-overhead.jpg)
 
-Treat them to some fun workout classes, better yet, treat both of you. Any type of class can be another fun way to hang out.
+I have some new additions to my magazine collection. _Elle_ November 2023 featuring Irina Shayk and _Harper's Bazaar_ art issue featuring Lana Del Rey.
 
-![pilates](/images/reformer-pilates.jpg)
+![desk magazines](/images/room-magazines.jpg)
 
-# Adidas Sambas
+I'm currently reading _INVENTION: A Life_ by James Dyson, which was gifted to me by my brother, Sebastian. He also gifted me _Ritz &amp; Escoffier: The Hotelier, The Chef &amp; the Rise of the Leisure Class_ by Luke Barr. I haven't read print in ages besides newspapers, so it's nice to have physical books again.
 
-In my opinion, one of the cutest shoes on the market right now. They're versatile and functional.
+My posters are from the campus poster sale. They honestly look kind of weird because I just smacked them on the wall with some tape. But it's better than a blank wall.
 
-![adidas sambas](/images/adidas-sambas.jpg)
+![room posters](/images/room-posters.jpg)
 
-# Books
+Last, but not least is my copious amount of tea. I told my brother, Jonathan, that I liked matcha once, and now he has sponsored nearly my entire collection. I have an assortment of english, green, and peppermint tea at my disposal.
 
-![books](/images/books.jpg)
-
-# Ballet Tickets
-
-Another fun way to spend an evening together. Especially during the holiday season, catching _The Nutcracker_ and getting a nice dinner is an excellent way to spend a fancy evening.
-
-![ballet](/images/christmas-ballet.jpg)
-
-# Monogramed Toiletry Bag
-
-Monogrammed anything is a great gift. It's functional and has a personal touch. Especially these toiletry bags, which will make traveling feel luxurious.
-
-![monogrammed toiletry bags](/images/toiletry-bag.png)
-
-# Crown Affair Comb
-
-Another way to gift some luxury to someone you love (or like). It seems like everyone and their mother are on a hair care journey in 2023. Let that bleed into 2024 with a fancy comb to step up their routine.
-
-![comb](/images/crown-affair.jpg)
-
-# Nécessaire Body Set
-
-With all of these in mind, don't forget the most important part; the letter. The letter is the ultimate and true gift to me. Even if you have a zero dollar budget, write something honest and kind. I promise it will make them melt.
-
-![necessaire set](/images/necessaire-set.jpg)
+![room tea](/images/dorm-tea.jpg)
