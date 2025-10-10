@@ -37,13 +37,25 @@ For dinner, we went to a restaurant in China Town called Peach Farms Restaurant 
 
 This day consisted of the Boston Public Library, the Boston Public Garden, and strolling through Beacon Hill. For a taste of Americana, we had some Dunkin' coffee, and I can confirm it's very much overrated. We started in the original McKim Building of the Boston Public Library, then proceeded to Deferrari Hall. The McKim building was adorned with paintings, historical photographs, and statues.
 
+![boston library](/images/bos-day-2.1.jpg)
+
 My brother had been eyeing the vegetarian spot, Life Alive Organic Cafe, so we chose the Mediterranean falafel wrap and the taco verde bowl to share. We hung out at the Boston Public Garden to take a break and eat. The bowl was okay but the wrap was a 10/10. The Boston Common was hosting a Japanese festival so we wandered around before our next stop.
 
+![boston beacon](/images/bos-day-2.2.jpg)
+
 Dinner was at Giacomo’s. We got a large seafood pasta platter to share. To finish the night off, we got cannolis from Mike's Pastry.
+
+![boston food](/images/bos-day-2.3.jpg)
 
 # Day 3
 
 In the early morning, my siblings played catch before my brother's shift. Then my sister and I went for a walk around the neighbourhood, where we ran into a turkey and ran away. Afterwards, we were left to our own devices without my brother to guide us. We decided to roam around and visit Fenway Park. Then we got dinner with my brother after work. We decided to hit Chinatown for the last time and get a hot pot feast. I can't even look at any hotpot the same anymore.
+
+![boston day](/images/bos-day-3.1.jpg)
+
+# 
+
+![boston night](/images/bos-day-3.2.jpg)
 
 --
 
