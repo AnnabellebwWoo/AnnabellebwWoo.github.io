@@ -15,16 +15,17 @@ const BlogLayout = ({
   next?: BlogPostProps | null;
   sections: Section[];
 }) => {
+  const hasThumbnail = post.thumbnail && post.thumbnail.trim() !== "";
   return (
     <div className={styles.container}>
-      {post.thumbnail && post.thumbnail.trim() !== "" && (
+      {hasThumbnail && (
         <Image
           src={post.thumbnail}
           alt={post.title + " image"}
           width={800}
           height={600}
           className={styles.image}
-        ></Image>
+        />
       )}
       <div className={styles.title}>{post.title}</div>
       <ul className={styles.info}>
