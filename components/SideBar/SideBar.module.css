@@ -47,3 +47,8 @@
 .featuredImage {
   border-radius: 20px;
 }
+
+.placeholder {
+  background-color: white;
+  border-radius: 20px;
+}

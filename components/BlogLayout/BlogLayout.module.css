@@ -37,12 +37,22 @@
 }
 
 .children p {
-  margin-bottom: 1.2rem;
   line-height: 1.75;
+  margin: 1.2rem 0;
 }
 
 .children {
   border-top: 1px solid #ccc;
+}
+
+.children ul {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+}
+
+.children ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
 }
 
 .navigation {
@@ -55,4 +65,12 @@
 
 .navLink {
   font-size: large;
+}
+
+.headingSection {
+  font-size: larger;
+  font-family: var(--font-playfair-display), serif;
+  color: grey;
+  font-weight: bold;
+  margin-top: 1rem;
 }

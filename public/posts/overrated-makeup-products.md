@@ -2,7 +2,7 @@
 title: Overrated Makeup Products
 excerpt: Makeup that is just not worth the hype.
 categories: [beauty]
-publishedDate: "2023-04-07"
+publishedDate: "2023-04-07T12:00:00"
 tags: beauty, kosas, lip-gloss, makeup, makeup-forever, overrated, powder, saie
 thumbnail: "/images/overrated-makeup.jpg"
 ---

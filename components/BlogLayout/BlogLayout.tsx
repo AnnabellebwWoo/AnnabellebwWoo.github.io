@@ -15,22 +15,23 @@ const BlogLayout = ({
   next?: BlogPostProps | null;
   sections: Section[];
 }) => {
+  const hasThumbnail = post.thumbnail && post.thumbnail.trim() !== "";
   return (
     <div className={styles.container}>
-      {post.thumbnail && post.thumbnail.trim() !== "" && (
+      {hasThumbnail && (
         <Image
           src={post.thumbnail}
           alt={post.title + " image"}
-          width={400}
-          height={300}
+          width={800}
+          height={600}
           className={styles.image}
-        ></Image>
+        />
       )}
       <div className={styles.title}>{post.title}</div>
       <ul className={styles.info}>
         <li>
           {new Date(post.publishedDate).toLocaleDateString("en-CA", {
-            timeZone: "America/Toronto", 
+            timeZone: "America/Toronto",
             year: "numeric",
             month: "long",
             day: "numeric",
@@ -62,6 +63,18 @@ const BlogLayout = ({
                 className={styles.image}
               />
             ));
+          }
+          if (section.type === "heading") {
+            return (
+              <div key={index} className={styles.headingSection}>
+                {section.content}
+              </div>
+            );
+          }
+          if (section.type === "list") {
+            return (
+              <React.Fragment key={index}>{section.content}</React.Fragment>
+            );
           }
           return null;
         })}

@@ -1,7 +1,7 @@
 ---
 title: What's in My Bag
 categories: [favourites]
-publishedDate: "2023-04-02"
+publishedDate: "2023-04-02T12:00:00"
 excerpt: Some insight into a few of my favourites!
 tags: bag, beauty
 thumbnail: "/images/purse.jpg"
@@ -33,7 +33,7 @@ An easy hairstyle in a pinch during a windy day.
 
 _[Kosas Lip Oil- Jellyfish](https://www.sephora.com/ca/en/product/lip-oil-P451920?skuId=2297505&icid2=products%20grid:p451920:product)_
 
-Dry lips are my biggest pet peeve-- if I happen to forget my lip oil then I’m scouring for a huge bottle of water.
+Dry lips are my biggest pet peeve — if I happen to forget my lip oil then I’m scouring for a huge bottle of water.
 
 _[It Cosmetics Bye Bye Undereye Concealer- 20.0 Medium](https://www.sephora.com/ca/en/product/bye-bye-under-eye-full-coverage-anti-aging-waterproof-concealer-mini-P446901?skuId=2224053&icid2=products%20grid:p446901:product)_
 
