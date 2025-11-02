@@ -4,9 +4,27 @@ import Link from "next/link";
 import Image from "next/image";
 import type { BlogPostProps } from "../../lib/types";
 
-const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
+interface SidebarProps {
+  recentPosts: BlogPostProps[];
+  isOpen?: boolean;
+  onClose?: () => void;
+  className?: string;
+}
+
+const Sidebar = ({ recentPosts, isOpen = false, onClose, className }: SidebarProps) => {
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ""} ${className || ""}`}>
+      <nav className={styles.mobileNav}>
+        <Link href="/"onClick={onClose}>Home</Link>
+        <Link href="/blog/category/beauty">Beauty</Link>
+        <Link href="/blog/category/clothing">Clothing</Link>
+        <Link href="/blog/category/favourites">Favourites</Link>
+        <Link href="/blog/category/cooking">Cooking</Link>
+        <Link href="/blog/category/opinion">Opinion</Link>
+        <Link href="/blog/category/misc">Misc</Link>
+        <Link href="/about">About Me</Link>
+      </nav>
+
       <section>
         <h3>Featured Post</h3>
         <ul>
@@ -33,7 +51,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
                 src="/images/email.png"
                 width={40}
                 height={40}
-                alt="Email Icon"
+                alt="Email"
               />
             </Link>
           </li>
@@ -43,7 +61,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
                 src="/images/instagram.png"
                 width={40}
                 height={40}
-                alt="Instagram Icon"
+                alt="Instagram"
               />
             </Link>
           </li>
@@ -53,7 +71,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
                 src="/images/tiktok.png"
                 width={40}
                 height={40}
-                alt="TikTok Icon"
+                alt="TikTok"
               />
             </Link>
           </li>
@@ -63,7 +81,7 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
                 src="/images/spotify.png"
                 width={40}
                 height={40}
-                alt="Spotify Icon"
+                alt="Spotify"
               />
             </Link>
           </li>
@@ -75,24 +93,22 @@ const Sidebar = ({ recentPosts }: { recentPosts: BlogPostProps[] }) => {
         <ul>
           {recentPosts.map((post) => {
             const thumbnail = post.thumbnail?.trim() || null;
-            const hasThumbnail = !!thumbnail;
-
             return (
               <li key={post.slug}>
                 <Link href={`/blog/post/${post.slug}`}>
-                  {hasThumbnail ? (
+                  {thumbnail ? (
                     <Image
-                      src={thumbnail as string}
-                      alt={post.title + " image"}
+                      src={thumbnail}
                       width={250}
                       height={250}
+                      alt={post.title + " image"}
                       className={styles.featuredImage}
                     />
                   ) : (
                     <div
                       className={styles.placeholder}
                       style={{ width: 250, height: 180 }}
-                    ></div>
+                    />
                   )}
                   <h2>{post.title}</h2>
                   <h4>Read more...</h4>
