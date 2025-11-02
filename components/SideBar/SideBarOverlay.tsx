@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./SidebarOverlay.module.css";
+import styles from "./SideBarOverlay.module.css";
 import type { BlogPostProps } from "../../lib/types";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   recentPosts: BlogPostProps[];
 }
 
-export default function SidebarOverlay({
+export default function SideBarOverlay({
   isOpen,
   onClose,
   recentPosts,
