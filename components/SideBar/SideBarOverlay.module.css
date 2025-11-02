@@ -1,0 +1,85 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 2000;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.featured {
+  border-radius: 12px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.placeholder {
+  background-color: #eee;
+  border-radius: 12px;
+}
+
+
+.overlay ul {
+  margin-left: 1rem;
+}
+
+
+.overlay section {
+  margin-bottom: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.overlay h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.overlay h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.overlay h4 {
+  color: grey;
+  margin-bottom: 1rem;
+}

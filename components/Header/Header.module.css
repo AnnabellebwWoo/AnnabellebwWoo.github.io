@@ -43,3 +43,24 @@
   flex: 1;
   text-align: left;
 }
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menuBar {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+}

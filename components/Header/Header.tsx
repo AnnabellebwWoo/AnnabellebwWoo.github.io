@@ -1,52 +1,48 @@
-import React from "react";
-import Link from "next/link";
-import styles from "./Header.module.css";
+"use client";
 
-const Header = () => {
+import React, { useState, useEffect } from "react";
+import styles from "./Header.module.css";
+import Logo from "./Logo";
+import HeaderLinks from "./HeaderLinks";
+import SidebarOverlay from "../SideBar/SideBarOverlay";
+import type { BlogPostProps } from "../../lib/types";
+
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [recentPosts, setRecentPosts] = useState<BlogPostProps[]>([]);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const res = await fetch("/api/posts");
+        const posts: BlogPostProps[] = await res.json();
+        setRecentPosts(posts.slice(0, 2));
+      } catch (err) {
+        console.error("Failed to fetch posts:", err);
+      }
+    }
+    fetchPosts();
+  }, []);
+
   return (
     <>
-      <div className={styles.Logo}>
-        <h1>
-          <Link href="/blog">Belle Reve</Link>
-        </h1>
-        <h2>A Lifestyle Blog</h2>
-      </div>
-      <div className={styles.lineWrapper}>
-        <hr className={styles.Line} />
-      </div>
-      <nav className={styles.menuBar}>
-        <ul>
-          <li>
-            <Link href="/blog">Home</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/beauty">Beauty</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/clothing">Clothing</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/favourites">Favourites</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/cooking">Cooking</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/opinion">Opinion</Link>
-          </li>
-          <li>
-            <Link href="/blog/category/misc">Misc</Link>
-          </li>
-          <li>
-            <Link href="/about-me">About Me</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className={styles.lineWrapper}>
-        <hr className={styles.Line} />
-      </div>
+      <header className={styles.header}>
+        <Logo />
+        <HeaderLinks />
+        <button
+          aria-label="Open menu"
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(true)}
+        >
+          ☰
+        </button>
+      </header>
+
+      <SidebarOverlay
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        recentPosts={recentPosts}
+      />
     </>
   );
-};
-
-export default Header;
+}

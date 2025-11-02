@@ -5,25 +5,20 @@ import { BlogPostProps } from "../../lib/types";
 import Image from "next/image";
 
 const BlogCard = ({ post }: { post: BlogPostProps }) => {
-  const thumbnail = post.thumbnail?.trim() || null;
-  const hasThumbnail = !!thumbnail;
 
   return (
     <ul className={styles.container}>
       <li>
         <Link href={{ pathname: "/blog/post/" + post.slug }}>
           <div className={styles.imageWrapper}>
-            {hasThumbnail ? (
               <Image
-                src={thumbnail as string}
+                src={post.thumbnail && post.thumbnail.trim() !== "" ? post.thumbnail : "/images/default-br.jpg"}
                 alt={post.title + " image"}
                 width={400}
                 height={300}
                 className={styles.image}
               />
-            ) : (
-              <div className={styles.placeholder}></div>
-            )}
+            
           </div>
         </Link>
       </li>

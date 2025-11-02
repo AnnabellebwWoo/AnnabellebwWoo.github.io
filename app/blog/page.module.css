@@ -1,8 +1,15 @@
 .row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
+  gap: 2rem;
   padding: 4em 0 0;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    padding: 2em 0;
+  }
 }

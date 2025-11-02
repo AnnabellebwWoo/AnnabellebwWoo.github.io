@@ -6,9 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <ul className={styles.Footer}>
-        <li>
-          <h1>Archives</h1>
-        </li>
+        
         <li>
           <h1>Categories</h1>
           <ul className={styles.subList}>

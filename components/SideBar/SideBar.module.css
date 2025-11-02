@@ -52,3 +52,40 @@
   background-color: white;
   border-radius: 20px;
 }
+
+.mobileNav {
+  display: none;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+  .mobileNav {
+    display: flex;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .closeBtn {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
