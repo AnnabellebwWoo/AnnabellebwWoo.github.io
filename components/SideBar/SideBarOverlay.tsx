@@ -34,15 +34,15 @@ export default function SideBarOverlay({
 
       <section>
         <h3>Featured Post</h3>
-        <Link href="/blog/post/prom-2023" onClick={onClose}>
+        <Link href="/blog/post/travel-diary-boston-ma" onClick={onClose}>
           <Image
-            src="/images/prom.jpg"
+            src="/images/boston-cover.jpg"
             width={250}
             height={250}
-            alt="Prom 2023"
+            alt="boston cover"
             className={styles.featured}
           />
-          <h2>Prom 2023</h2>
+          <h2>Travel Diary: Boston, MA</h2>
           <h4>Read more...</h4>
         </Link>
       </section>
