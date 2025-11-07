@@ -19,7 +19,7 @@ const Sidebar = ({ recentPosts, isOpen = false, onClose, className }: SidebarPro
         <Link href="/blog/category/beauty">Beauty</Link>
         <Link href="/blog/category/clothing">Clothing</Link>
         <Link href="/blog/category/favourites">Favourites</Link>
-        <Link href="/blog/category/stem">STEM</Link>
+        <Link href="/blog/category/STEM">STEM</Link>
         <Link href="/blog/category/opinion">Opinion</Link>
         <Link href="/blog/category/misc">Misc</Link>
         <Link href="/about">About Me</Link>
