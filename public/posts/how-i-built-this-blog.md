@@ -121,6 +121,7 @@ I originally planned on hosting on Github Pages since it was the first free opti
 - markdown parser and automating
 - transferring posts
 - next app router
+- git/version control
 
 # 9. What's Next
 
