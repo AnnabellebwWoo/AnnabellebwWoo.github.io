@@ -9,7 +9,7 @@ Custom built blog by Annabelle Woo, created with Next.js, Typescript, and CSS mo
 - **TypeScript**
 - **CSS Modules** (`*.module.css`) for styling
 - **Vercel** for deployment
-- **MDX** for writing posts
+- **MD** for writing posts
 - **Prettier + ESLint**
 
 ---
@@ -18,13 +18,13 @@ Custom built blog by Annabelle Woo, created with Next.js, Typescript, and CSS mo
 - Fully responsive layout
 - Custom components (Header, Footer, Blog Cards, Sidebar, etc.)
 - Mbile hamburger menu with full-screen overlay
-- MDX support for writing posts
+- MD for writing posts
 
 ---
 
 ## **Writing Posts**
 
-Example MDX file:
+Example MD file:
 
 ```md
 ---
