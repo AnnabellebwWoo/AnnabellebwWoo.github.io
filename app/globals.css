@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+
+:root {
+  --font-antic-didone: 'Antic Didone', serif;
+  --font-playfair-display: 'Playfair Display', serif;
+}
+
+html {
   font-family: var(--font-antic-didone), serif;
 }
 
@@ -10,3 +16,8 @@ p {
   font-family: var(--font-playfair-display), serif;
   color: grey;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-antic-didone), serif;
+}
+
