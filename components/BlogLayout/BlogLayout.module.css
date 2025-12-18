@@ -55,6 +55,11 @@
   padding-left: 1.5rem;
 }
 
+.children a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
