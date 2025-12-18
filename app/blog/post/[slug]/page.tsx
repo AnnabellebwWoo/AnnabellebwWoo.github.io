@@ -1,6 +1,9 @@
-import React from "react";
 import BlogLayout from "../../../../components/BlogLayout/BlogLayout";
-import { getFiles, getPostBySlug, getAdjacentPosts } from "../../../../lib/utils";
+import {
+  getFiles,
+  getPostBySlug,
+  getAdjacentPosts,
+} from "../../../../lib/utils";
 import { parseMarkdownToSections } from "../../../../lib/parseMarkdown";
 import type { Section } from "../../../../lib/types";
 
@@ -20,9 +23,12 @@ export default async function BlogPost({
   const sections: Section[] = parseMarkdownToSections(post.markdownBody);
 
   return (
-      <BlogLayout post={post} previous={previous} next={next} sections={sections}>
-      
-    </BlogLayout>
+    <BlogLayout
+      post={post}
+      previous={previous}
+      next={next}
+      sections={sections}
+    ></BlogLayout>
   );
 }
 
