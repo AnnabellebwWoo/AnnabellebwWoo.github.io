@@ -29,15 +29,14 @@ Example MD file:
 ```md
 ---
 title: "Rebuilding My Blog From Scratch"
-date: "2025-07-11"
-category: "misc"
 excerpt: "Behind the scenes of coding Belle Reve."
+categories: [STEM]
+publishedDate: "2025-12-21T12:00:00"
+tags: Next.js, React, TypeScript, CSS, Vercel, MD, ESLint, Prettier
+thumbnail: "/images/vscode-ss.jpg"
 ---
-
 Your content here...
 ```
-
----
 
 ## Contributing
 This is a personal project, but suggestions are always welcome [here](https://forms.gle/DTQjckS8KJaXh2eE6)
