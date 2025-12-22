@@ -17,7 +17,7 @@ Custom built blog by Annabelle Woo, created with Next.js, Typescript, and CSS mo
 ## **Features**
 - Fully responsive layout
 - Custom components (Header, Footer, Blog Cards, Sidebar, etc.)
-- Mbile hamburger menu with full-screen overlay
+- Mobile hamburger menu with full-screen overlay
 - MD for writing posts
 
 ---
