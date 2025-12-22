@@ -2,7 +2,7 @@
 title: How I Built This Blog
 excerpt: All the technical details and what I learned.
 categories: [STEM]
-publishedDate: "2025-12-21T12:00:00"
+publishedDate: "2025-12-22T12:00:00"
 tags: Next.js, React, TypeScript, CSS, Vercel, MD, ESLint, Prettier
 thumbnail: "/images/vscode-ss.jpg"
 ---
