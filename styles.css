@@ -1,5 +1,5 @@
 /* global */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto&family=Crimson+Pro');
 
 .grid-2{
     display: grid;
@@ -27,6 +27,7 @@ a{
 .section-1{
     padding-top: 40vh;
     text-align: center;
+    font-family: 'Crimson Pro', serif;
 }
 
 .section-1 p{
@@ -37,7 +38,7 @@ a{
 
 .section-1 h2{
     font-size: 1.7rem;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
 }
 
 .section-1 a{
@@ -67,24 +68,6 @@ a{
     font-size: 1.2rem;
     padding-left: 0;
     width: 100px;
-}
-/* animations / utilities */
-.section-2 a:hover{
-    font-size: 1.3rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-1 a:hover{
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.white:hover{
-    position: relative;
-    padding-left: 10px;
 }
 
 /* media queres */
