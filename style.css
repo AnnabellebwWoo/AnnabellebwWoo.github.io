@@ -5,24 +5,24 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Crimson Pro', serif;
     color: #7A7C80;
+    font-size: 1.2rem;
 }
 
 a{
     color: #7A7C80;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* section 1 */
 .section-1{
-    padding-top: 40vh;
+    padding-top: 10vh;
     text-align: center;
     font-family: 'Crimson Pro', serif;
 }
 
 .section-1 p{
-    font-size: 1.1rem;
     padding-bottom: 10px;
     margin:0;
 }
@@ -32,15 +32,11 @@ a{
     margin-bottom: 10px;
 }
 
-.section-1 a{
-    font-size: 1.5rem;
-    padding: 10px;
-}
-
 /* section 2 */
 .section-2{
-    padding-top: 10vh;
-    width: 70%;
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem;
 }
 
 .section-2 h2{
@@ -49,30 +45,17 @@ a{
 }
 
 .section-2 p{
-    font-size: 1.1rem;
     padding-bottom: 10px;
-    margin:0;
+    width: 90%;
 }
 
 .section-2 a{
-    display: block;
-    padding: 5px;
-    font-size: 1.2rem;
-    padding-left: 0;
-    width: 100px;
+    display: inline;
 }
 
-@media(max-width:780px){
-    .grid-2{
-        grid-template-columns: 1fr;
-    }
-    .section-1{
-        padding:0;
-        padding-top: 5rem;
-    }
-    .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
-    }
+/* footer */
+
+.footer{
+    text-align: center;
+    
 }
